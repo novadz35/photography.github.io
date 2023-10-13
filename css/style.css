@@ -1,29 +1,3 @@
-@font-face {
-    font-family: 'Source Code Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-    url('/fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf') format('ttf'),
-
-}
-
-@font-face {
-    font-family: 'Dancing Script';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/fonts/Dancing_Script/static/DancingScript-Regular.ttf') format('ttf'),
-
-}
-
-@font-face {
-    font-family: 'Pacifico';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/fonts/Pacifico/Pacifico-Regular.ttf') format('ttf'),
-
-}
-
-
 * {
     padding: 0;
     margin: 0;
@@ -35,7 +9,7 @@
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 10vh;
     min-height: 5rem;
     align-content: center;
@@ -43,25 +17,44 @@ header {
     width: 100%;
     height: 100%;
     background-color: black;
-    padding: 0 20px ;
+    padding: 20px ;
 }
 
 .logo  {
     text-decoration: none;
     color: white;
-    font-family: 'Source Code Pro';
+    font-family: 'Satisfy', cursive;
     font-size: 2rem;
+    flex: 1 1 40rem;
 }
 
 
 .nav-list {
     list-style: none;
+    flex: 1 1 40rem;
+    padding-bottom: 0.3rem;
+
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-list li {
     display: inline-block;
     padding: 0 20px;
+    position: relative;
 
+}
+
+.nav-list li div {
+    position: absolute;
+}
+.nav-list li div span {
+    color: white;
+    font-size: 1.3rem;
+    opacity: 0;
 }
 
 .nav-list li a {
@@ -72,8 +65,16 @@ header {
 
 .nav-list li a:hover {
     font-size: 24px;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-out;
 }
+
+.nav-list li:hover div span {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+
+
+
 
 .contact-me-button {
     padding: 6px 10px;
@@ -199,14 +200,27 @@ header {
 
 
 @media (max-width: 600px) {
+
     header {
         flex-direction: column;
         padding: 0;
         padding-top: 5px;
 
     }
+    .logo  {
+
+        flex: 1 1;
+    }
+    .nav-list li div span {
+        opacity: 0;
+    }
+    
+    .nav-list {
+        flex: 1 1 ;
+    
+    }
     .nav-list li {
-        padding: 1.5rem 0;
+        padding: 1.5rem 2rem;
     }
     .nav-list li a {
         font-size: 16px;

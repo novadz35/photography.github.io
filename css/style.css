@@ -287,4 +287,7 @@ header {
     .contact svg {
         height: 3em;
     }
-  }
+    #myBtn {
+        display: none;
+    }
+}

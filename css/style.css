@@ -5,9 +5,6 @@
     font-family: 'Source Code Pro', monospace;
 }
 
-body {
-    overflow: hidden;
-}
 
 header {
     display: flex;

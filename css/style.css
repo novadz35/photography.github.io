@@ -5,7 +5,10 @@
     font-family: 'Source Code Pro', monospace;
 }
 
-
+body {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 header {
     display: flex;
     justify-content: space-evenly;

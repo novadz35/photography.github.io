@@ -214,7 +214,7 @@ header {
         flex: 1 1;
     }
     .nav-list li div span {
-        opacity: 0;
+        display: none;
     }
     
     .nav-list {

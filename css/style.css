@@ -217,6 +217,9 @@ header {
         display: none;
     }
     
+    .nav-list li:hover div span {
+        display: none;
+    }
     .nav-list {
         flex: 1 1 ;
     
